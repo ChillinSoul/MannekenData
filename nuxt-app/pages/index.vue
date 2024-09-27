@@ -1,0 +1,4 @@
+<template>
+    <Hero/>
+    <Actions/>
+</template>
