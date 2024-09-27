@@ -12,7 +12,7 @@ RUN npm ci --production
 COPY . .
 
 # Expose the port the app runs on
-EXPOSE 5432
+EXPOSE 3000
 
 # Start the application
-CMD ["npm", "start"]
+CMD ["node", "./.output/server/index.mjs", "-p", "3000"]

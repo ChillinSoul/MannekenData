@@ -17,4 +17,4 @@ spec:
         image: nuxt-app:latest
         imagePullPolicy: Never
         ports:
-        - containerPort: 5432
+        - containerPort: 3000

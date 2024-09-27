@@ -6,6 +6,11 @@ export default defineNuxtConfig({
       silent: true,
     },
   },
+  nitro: {
+    devServer: {
+      port: 3000,
+    },
+  },
   postcss: {
     plugins: {
       tailwindcss: {},
