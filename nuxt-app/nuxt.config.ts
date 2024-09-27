@@ -10,6 +10,31 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ['@nuxt/fonts', '@pinia/nuxt', '@nuxt/ui'],
-  compatibilityDate: '2024-09-27',
+  modules: ['@nuxt/fonts', '@pinia/nuxt', '@nuxt/ui', '@nuxt/icon'],
+
+  future: {
+    compatibilityVersion: 4,
+  },
+
+  experimental: {
+    sharedPrerenderData: false,
+    compileTemplate: true,
+    resetAsyncDataToUndefined: true,
+    templateUtils: true,
+    relativeWatchPaths: true,
+    normalizeComponentNames: false,
+    defaults: {
+      useAsyncData: {
+        deep: true
+      }
+    }
+  },
+
+  unhead: {
+    renderSSRHeadOptions: {
+      omitLineBreaks: false
+    }
+  },
+
+  compatibilityDate: '2024-09-27'
 })

@@ -1,7 +1,7 @@
 <template>
-    <div class = "card bg-gray-700 text-white p-4 ">
+    <div class = "container bg-gray-700 text-white ">
         <h2 class="text-2xl font-bold">Card</h2>
-        <div class="card-body">
+        <div class="">
             <p>Card description</p>
         </div>
         
