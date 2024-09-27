@@ -1,13 +1,4 @@
 <script setup>
-useHead({
-  title: 'Manneken Data',
-  meta: [
-    {
-      name: 'description',
-      content: 'Manneken Data is a data science tool'
-    }
-  ],
-})
 </script>
 
 <style>
@@ -17,6 +8,8 @@ div {
 </style>
 
 <template>
-  <Navbar/>   
-  <NuxtPage/>
+   
+  <NuxtLayout> 
+    <NuxtPage/>
+  </NuxtLayout>
 </template>

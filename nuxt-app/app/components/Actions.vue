@@ -4,10 +4,12 @@
             <h2 class="text-2xl font-bold text-center">Tools</h2>
         </div>
         
-        <div class="flex gap-4 mx-4  h-full justify-between">
+        <div class="grid grid-cols-3 gap-4 mx-4  h-full justify-between">
+            <BuiltWithNuxt/>
             <Card/>
             <Card/>
             <Card/>
+            <APITest/>
         </div>
     </div>
     
