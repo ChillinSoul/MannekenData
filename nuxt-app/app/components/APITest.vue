@@ -6,7 +6,7 @@ const { data, pending, error } = await useFetch(endpoint)
 </script>
 
 <template>
-  <div class="container bg-gray-700">
+  <div class="container bg-gray-700 text-white">
     <h2 class="text-2xl">API Test</h2>
     
     <p>Endpoint: {{ endpoint }}</p>

@@ -6,9 +6,8 @@
         
         <div class="grid grid-cols-3 gap-4 mx-4  h-full justify-between">
             <BuiltWithNuxt/>
-            <Card/>
-            <Card/>
-            <Card/>
+            <Card title="A" description="this is a description"/>
+            <Card title="B" description="this is a description"/>
             <APITest/>
         </div>
     </div>

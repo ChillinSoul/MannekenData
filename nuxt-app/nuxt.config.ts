@@ -6,9 +6,13 @@ export default defineNuxtConfig({
       silent: true,
     },
   },
+  server: {
+    port: 3000,
+    host: '0.0.0.0',
+  },
   nitro: {
-    devServer: {
-      port: 3000,
+    experimental: {
+      openAPI: true,
     },
   },
   postcss: {
