@@ -5,10 +5,10 @@
                 <h2 class="text-2xl absolute w-full text-center pointer-events-none">Manneken Data</h2>
                 <ul class="flex gap-4">
                     <li>
-                        <NuxtLink to="/">Home</NuxtLink>
+                        <NuxtLink to="/nuxt-app/">Home</NuxtLink>
                     </li>
                     <li>
-                        <NuxtLink to="/about">About</NuxtLink>
+                        <NuxtLink to="/nuxt-app/about">About</NuxtLink>
                     </li>
                 </ul>
             </div>

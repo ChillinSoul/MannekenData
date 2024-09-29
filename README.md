@@ -21,6 +21,21 @@ This guide will help you deploy the `nuxt-app` (located under `/nuxt-app`) and o
 
 ## Getting Started
 
+### 0. Easy start
+If you do this, IGNORE the rest
+``` bash
+chmod +x deploy.sh clean.sh /nuxt-app/deploy.sh /nuxt-app/clean.sh /nginx-home/deploy.sh /nginx-home/clean.sh
+```
+to start 
+``` bash
+./deploy.sh
+```
+
+to cleanup
+``` bash
+./clean.sh
+```
+
 ### 1. Start Minikube and Enable Ingress Addon
 
 If you're using Minikube, start it with the necessary resources and enable the Ingress addon.
