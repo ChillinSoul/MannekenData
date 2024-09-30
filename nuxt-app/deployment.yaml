@@ -13,8 +13,8 @@ spec:
         app: nuxt-app
     spec:
       containers:
-      - name: nuxt-app
-        image: nuxt-app:latest
-        imagePullPolicy: Never
-        ports:
-        - containerPort: 3000
+        - name: nuxt-app
+          image: nuxt-app-image
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 3000
