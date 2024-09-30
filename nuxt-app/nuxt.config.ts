@@ -6,6 +6,9 @@ export default defineNuxtConfig({
       silent: true,
     },
   },
+  router: {
+    base: '/nuxt-app/',
+  },
   server: {
     port: 3000,
     host: '0.0.0.0',

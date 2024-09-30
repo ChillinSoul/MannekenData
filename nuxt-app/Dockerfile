@@ -14,5 +14,5 @@ COPY . .
 # Expose the port the app runs on
 EXPOSE 3000
 
-# Start the application
+
 CMD ["node", "./.output/server/index.mjs", "-p", "3000"]
