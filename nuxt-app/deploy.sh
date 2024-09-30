@@ -6,9 +6,15 @@ set -e
 # Variables
 IMAGE_NAME="nuxt-app-image"
 
+# Detect the operating system
+OS="$(uname)"
+IS_WINDOWS=false
 
-echo "enabeling ingress"
+if [[ "$OS" == *"NT"* || "$OS" == *"MINGW"* || "$OS" == *"CYGWIN"* ]]; then
+  IS_WINDOWS=true
+fi
 
+echo "Enabling ingress in Minikube on $OS..."
 minikube addons enable ingress
 
 echo "Starting deployment process for nuxt-app..."
@@ -30,8 +36,17 @@ if ! minikube status > /dev/null 2>&1; then
 fi
 
 # Step 3: Point Docker to Minikube's Docker daemon
-echo "Configuring Docker to use Minikube's Docker daemon..."
-eval $(minikube docker-env)
+if [ "$IS_WINDOWS" = true ]; then
+  echo "Detected Windows environment. Configuring Docker for Minikube on Windows..."
+  
+  # For Windows (Git Bash/Cygwin), use winpty to set Minikube Docker environment
+  winpty eval $(minikube docker-env)
+
+  # If you're using Docker Desktop, it might already be configured properly, and you may skip this part.
+else
+  echo "Configuring Docker to use Minikube's Docker daemon..."
+  eval $(minikube docker-env)
+fi
 
 # Step 4: Build the Docker image for Nuxt app
 echo "Building the Docker image: $IMAGE_NAME..."
