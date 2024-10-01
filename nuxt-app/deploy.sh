@@ -18,7 +18,7 @@ echo "Enabling ingress in Minikube on $OS..."
 minikube addons enable ingress
 
 echo "Starting deployment process for nuxt-app..."
-
+npm i
 # Step 1: Build the Nuxt application
 echo "Building the Nuxt application..."
 if npm run build; then
