@@ -22,18 +22,68 @@ This guide will help you deploy the `nuxt-app` (located under `/nuxt-app`) and o
 ## Getting Started
 
 ### 0. Easy start
+
 If you do this, IGNORE the rest
-``` bash
+
+```bash
 chmod +x deploy.sh clean.sh /nuxt-app/deploy.sh /nuxt-app/clean.sh /nginx-home/deploy.sh /nginx-home/clean.sh
 ```
-to start 
-``` bash
+
+to start
+
+```bash
 ./deploy.sh
 ```
 
 to cleanup
-``` bash
+
+```bash
 ./clean.sh
+```
+
+### 0.1 Easy start using WSL
+
+If you do this, IGNORE the rest
+
+Run Power Shell as Administrator and run the following commands in PowerShell:
+
+```PowerShell
+wsl
+```
+
+head to nuxt-app directory:
+
+```bash
+cd nuxt-app
+```
+
+```bash
+chmod +x deploy_wsl.sh clean_wsl.sh
+```
+
+install dos2unix and run it on the bash scripts:
+
+```bash
+sudo apt-get install dos2unix
+dos2unix ./deploy_wsl.sh ./cleanup_wsl.sh
+```
+
+Create the alias for kubectl:
+
+```bash
+alias kubectl="minikube kubectl --"
+```
+
+to start
+
+```bash
+bash ./deploy_wsl.sh
+```
+
+to cleanup
+
+```bash
+bash ./clean_wsl.sh
 ```
 
 ### 1. Start Minikube and Enable Ingress Addon
