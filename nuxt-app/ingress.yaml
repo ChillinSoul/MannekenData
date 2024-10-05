@@ -24,3 +24,17 @@ spec:
                 name: nginx-home-service
                 port:
                   number: 80
+          - path: /hello-k8s(/|$)(.*)
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: hello-k8s-service
+                port:
+                  number: 80
+          - path: /bb-app(/|$)(.*)
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: bb-app-service
+                port:
+                  number: 80

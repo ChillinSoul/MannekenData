@@ -1,13 +1,19 @@
 <script lang="ts" setup>
-const endpoint = 'http://nuxt-app-service/api/hello/message'  
+const props = defineProps({
+  endpoint: {
+    type: String,
+    required: true
+  }
+})
 
-const { data, pending, error } = await useFetch(endpoint)
+// Use the endpoint prop directly
+const { data, pending, error } = await useFetch(props.endpoint)
 </script>
 
 <template>
   <div class="container bg-gray-700 text-white">
     <h2 class="text-2xl">API Test</h2>
-    
+
     <p>Endpoint: {{ endpoint }}</p>
 
     <div v-if="pending">Loading...</div>
