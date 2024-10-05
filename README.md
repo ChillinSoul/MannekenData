@@ -21,7 +21,7 @@ This guide will help you deploy the `nuxt-app` (located under `/nuxt-app`) and o
 
 ## Getting Started
 
-### 0. Easy start
+### 0. Easy start mac os 
 
 If you do this, IGNORE the rest
 
@@ -33,6 +33,11 @@ to start
 
 ```bash
 ./deploy.sh
+```
+
+to acces the app through localhost
+```bash 
+minikube tunnel
 ```
 
 to cleanup
@@ -78,6 +83,11 @@ to start
 
 ```bash
 bash ./deploy_wsl.sh
+```
+
+to acces the app through localhost
+```bash 
+minikube tunnel
 ```
 
 to cleanup
